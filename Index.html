@@ -1,197 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>💡 Your Daily-Life Problem Matters – Student Voice Initiative</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-image: url('https://static.vecteezy.com/system/resources/previews/000/106/644/original/abstract-blue-wavy-background-vector.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment:scroll;
-            background-position: center;
-             color: #000000;
-             opacity: 0.95;
-        }
-        .ai-hero {
-            background: linear-gradient(120deg, #6366f1 60%, #06b6d4 100%);
-            color: #fff;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 24px rgba(99,102,241,0.15);
-            padding: 2.5rem 2rem 2rem 2rem;
-            margin-bottom: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .ai-hero img {
-            max-width: 180px;
-            border-radius: 1rem;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        }
-        .ai-bg {
-            position: absolute;
-            right: -60px;
-            bottom: -40px;
-            opacity: 0.15;
-            width: 350px;
-            z-index: 0;
-        }
-        .section-title {
-            font-weight: 700;
-            color: #4f46e5;
-            margin-bottom: 1rem;
-        }
-        .icon-circle {
-            background: #f1f5f9;
-            color: #06b6d4;
-            border-radius: 50%;
-            padding: 0.7rem;
-            font-size: 1.5rem;
-            margin-right: 0.7rem;
-        }
-        .privacy-box {
-            background: #f9fafb;
-            border-left: 5px solid #06b6d4;
-            padding: 1.2rem 1.5rem;
-            border-radius: 0.7rem;
-            font-style: italic;
-            margin-bottom: 2rem;
-             color: #000000;
-        }
-        .footer-quote {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-top: 2rem;
-            text-align: center;
-        }
-        a.btn-primary {
-            background: linear-gradient(90deg, #6366f1 60%, #06b6d4 100%);
-            border: none;
-            padding: 0.8rem 1.5rem;
-            font-weight: 600;
-            transition: background 0.3s ease;
-            animation: alternate-reverse 2s infinite;
-        }
-        .social-icons a {
-            color: #6366f1;
-            margin-right: 1rem;
-            font-size: 1.5rem;
-        }
-        @media (max-width: 768px) {
-            .ai-hero {
-                text-align: center;
-            }
-            .ai-hero img {
-                margin-bottom: 1rem;
-            }
-            .ai-bg {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Daily-Life Problem Matters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #F0F0F0;
+      --accent: #00ADB5;
+      --hover-color: #00fff0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header, section, footer {
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin: 1.5rem 0;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      color: var(--bg-color);
+      background-color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .cta-button:hover {
+      background-color: var(--hover-color);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--accent);
+      color: var(--bg-color);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .background-illustration {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 2rem auto;
+    }
+
+    .light-mode {
+      --bg-color: #FFFFFF;
+      --text-color: #121212;
+    }
+  </style>
 </head>
 <body>
-    <div class="container py-4">
-        <!-- Hero Section -->
-        <div class="ai-hero row align-items-center mb-4">
-            <div class="col-md-3 text-center">
-                <img src="https://bing.com/th/id/BCO.fd32cefc-33e3-45fb-9e96-63f415f4756a.png" alt="AI ML Visual" class="img-fluid mb-2">
-            </div>
-            <div class="col-md-9">
-                <h1 class="display-5 fw-bold mb-2">💡 Your Daily-Life Problem Matters</h1>
-                <h4 class="mb-3">Student Voice Initiative</h4>
-                <p class="lead mb-1">Empowering student journeys through <b>empathy, data, and innovation</b>.</p>
-                <img src="https://img.freepik.com/free-vector/wavy-background-concept_23-2148497712.jpg" class="ai-bg" alt="Abstract digital waves and dots in vibrant purple, blue, and orange colors flowing across a dark background, creating a dynamic and energetic atmosphere. No text present.">
-            </div>
-        </div>
 
-        <!-- About Section -->
-        <div class="mb-4">
-            <h2 class="section-title"><i class="fa-solid fa-circle-info icon-circle"></i>About This Project</h2>
-            <p>We believe that real solutions begin with real stories.<br>
-            This initiative aims to collect <b>authentic daily challenges</b> faced by people—from real-world issues.</p>
-            <p>Our goal?<br>
-            To use AI and empathy-driven research to identify patterns, spark conversations, and build tools that make life better for everyone.</p>
-        </div>
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
-        <!-- What We Do -->
-        <div class="mb-4">
-            <h2 class="section-title"><i class="fa-solid fa-brain icon-circle"></i>What We Do</h2>
-            <ul class="list-group list-group-flush mb-3">
-                <li class="list-group-item"><i class="fa-solid fa-comments icon-circle"></i> Collect real problem statements via a simple, confidential form</li>
-                <li class="list-group-item"><i class="fa-solid fa-chart-line icon-circle"></i> Analyze student feedback using AI, NLP, and visualization tools</li>
-                <li class="list-group-item"><i class="fa-solid fa-lightbulb icon-circle"></i> Explore potential innovations to solve or ease the problems shared</li>
-                <li class="list-group-item"><i class="fa-solid fa-handshake icon-circle"></i> Collaborate with educators, researchers, and builders</li>
-            </ul>
-        </div>
+  <!-- Tech Illustration -->
+  <img class="background-illustration" src="https://undraw.co/api/illustrations/ai-thinking.svg" alt="AI Thinking Illustration">
 
-        <!-- Share Your Voice -->
-        <div class="mb-4">
-            <h2 class="section-title"><i class="fa-solid fa-microphone-lines icon-circle"></i>Share Your Voice</h2>
-            <p>🌍 Are you facing issues that no one talks about?<br>
-            <b>Your story matters</b>—and it might inspire the next big change.</p>
-            <a href="https://forms.gle/yJ1pm5KT5dWL8qsr6" class="btn btn-primary btn-lg mb-3" target="_blank">
-                <i class="fa-solid fa-paper-plane"></i> Click here to fill the form
-            </a>
-            <ul>
-                <li>Challenges in academics, mental health, society, or daily life</li>
-                <li>Social, financial, or technological barriers</li>
-                <li>Ideas you have for making life easier for yourself or others</li>
-            </ul>
-        </div>
+  <header>
+    <h1>Your Daily-Life Problem Matters</h1>
+    <p>Welcome to Phase-1 of our Final-Year Research Initiative. We're collecting everyday challenges and unique perspectives from students to build something meaningful using AI, empathy, and innovation.</p>
+    <a class="cta-button" href="YOUR_GOOGLE_FORM_URL" target="_blank">Submit Your Ideas</a>
+  </header>
 
-        <!-- Privacy & Transparency -->
-        <div class="privacy-box mb-4">
-            <i class="fa-solid fa-shield-halved"></i>
-            We collect your responses <b>confidentially</b> and use them only for research and development.<br>
-            This initiative is not about your name—it's about <b>your experience</b>.<br>
-            We respect your voice, protect your data, and promise to listen deeply. ❤️
-        </div>
+  <section>
+    <h2>🔍 Why Are We Doing This?</h2>
+    <p>This is more than a form—it's the foundation for our final-year project. We're conducting a professional, research-driven study to understand the problems students face and turn those insights into prototypes or tools that make a difference.</p>
+  </section>
 
-        <!-- Powered By -->
-        <div class="mb-4">
-            <h2 class="section-title"><i class="fa-solid fa-rocket icon-circle"></i>Powered By</h2>
-            <div class="row g-3">
-                                <div class="col-md-3 col-6 text-center">
-                    <img src="https://srkit.in/images/flogo.png" alt="College" class="img-fluid" style="max-width:120px;">
-                </div>
-                <div class="col-md-3 col-6 text-center">
-                    <img src="https://bing.com/th/id/BCO.e4664f1b-3b29-48d1-b212-c8481499b4c1.png" alt="AI" class="img-fluid" style="max-width:120px;">
-                </div><br>
-                <div class="col-md-3 col-6 text-center">
-                    <img src="https://bing.com/th/id/BCO.45067217-366a-496a-b74b-a8b7415ccdb3.png" alt="Community" class="img-fluid" style="max-width:120px;">
-                </div>
-            </div>
-        </div>
+  <section>
+    <h2>📊 What Will Your Input Be Used For?</h2>
+    <ul>
+      <li>Apply NLP to identify student pain points</li>
+      <li>Visualize and prioritize themes with Tableau</li>
+      <li>Convert validated problems into project ideas</li>
+      <li>Build inclusive, AI-powered prototypes</li>
+    </ul>
+  </section>
 
-        <!-- Let's Build Together -->
-        <div class="mb-4">
-            <h2 class="section-title"><i class="fa-solid fa-seedling icon-circle"></i>Let’s Build Together</h2>
-            <ul>
-                <li>Love solving problems?</li>
-                <li>Want to collaborate with AI engineers and designers?</li>
-                <li>Have ideas you'd like to develop with us?</li>
-            </ul>
-            <p>
-                <b>📨 Reach out:</b> <a href="mailto:eighteenpaise@outlook.com">eighteenpaise@outlook.com</a>
-            </p>
-        </div>
+  <section>
+    <h2>🤝 Who Can Participate?</h2>
+    <ul>
+      <li>Students from any year, especially juniors and batchmates</li>
+      <li>Anyone with overlooked problems or novel ideas</li>
+    </ul>
+    <p>Your responses are confidential and exclusively for academic research.</p>
+  </section>
 
-        <!-- Footer Quote -->
-        <div class="footer-quote">
-            <i class="fa-solid fa-quote-left"></i>
-            We don’t just build products. We build understanding.<br>
-            <span class="fw-bold">— AIML@2026 Team</span>
-        </div>
-    </div>
-    <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer>
+    © 2025 AIML@2026 Team — Final-Year Research Portal • Contact: eighteenpaise@outlook.com
+  </footer>
+
+  <!-- JavaScript for Theme Toggle -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+
 </body>
 </html>
